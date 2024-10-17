@@ -1,0 +1,254 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Water & Sewerage Bill</title>
+    <link rel="stylesheet" href="hsvp.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 p-4">
+    <div class="bg-white p-4 max-w-lg mx-auto border border-gray-300">
+        <img src="image\MasterHudaLogo1.gif" alt="hsvp" width="100%" height="60px">
+            <div class="p-1">
+                <p>Water & Sewerage Bill पानी और सीवरेज बिल</p>
+            </div>
+        
+        <table class="w-full text-xs">
+            <tr>
+                <th class="font-bold">S.No</th>
+                <th class="font-bold">Particulars / विवरण</th>
+                <th class="font-bold"></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="font-bold">Consumer Number / उपभोक्ता संख्या</td>
+                <td id="consumer_number">2500001316</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="font-bold">Site Code / साइट कोड</td>
+                <td id="site_code"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="font-bold">Name and Address / नाम और पता</td>
+                <td id="consumer_name_address"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="font-bold">Bill No and Date / बिल संख्या और तिथि</td>
+                <td id="bill_no"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="font-bold">Due Date / नियत तारीख</td>
+                <td id="due_date"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td class="font-bold">Plot Category / भूखंड श्रेणी</td>
+                <td id="plot_category"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td class="font-bold">Plot Size / भूखंड का आकार</td>
+                <td id="plot_size"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td class="font-bold">Total No. of WC / कुल शौचालयों की संख्या</td>
+                <td id="total_wc"></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td class="font-bold">Connection Size / कनेक्शन का आकार</td>
+                <td id="connection_size"></td>
+            </tr>
+            <tr>
+                <td class="ten">10</td>
+                <td rowspan="2">
+                    <div class="flex flex-row font-bold">
+                        <div class="mr-5 p-3">
+                            <div>Bill Period <br> बिल अवधि</div>
+                        </div>
+                        <div class="b-left  mb-auto">
+                            <div class="pl-3 b-bottom pb-3">From Date / से तिथि</div>
+                            <div class="pl-3 pt-3">To Date / तक तिथि</div>
+                        </div>
+                    </div>
+                </td>
+                <td id="bill_from"></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td id="bill_to"></td>
+            </tr>
+            <tr>
+                <td class="ten">12</td>
+                <td rowspan="2">
+                    <div class="flex flex-row font-bold">
+                        <div class="mr-2 p-2">
+                            <div>Meter Reading Date <br> मीटर रीडिंग तिथि</div>
+                        </div>
+                        <div class="b-left  mb-auto">
+                            <div class="pl-3 b-bottom pb-3">Old Reading / पुरानी रीडिंग</div>
+                            <div class="pl-3 pt-3">New Reading / नई रीडिंग</div>
+                        </div>
+                    </div>
+                </td>
+                <td id="meter_old_reading"></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td id="meter_new_reading"></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td class="font-bold">Consumption (KL) & Meter Status / खपत (केएल) और मीटर स्थिति</td>
+                <td id="consumption_kl"> </td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td class="font-bold">Waste Water Charges / अपशिष्ट जल शुल्क</td>
+                <td id="waste_water_charges"></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td class="font-bold">Arrears in Rs / बकाया राशि</td>
+                <td id="arrears_rs"></td>
+            </tr>
+            <tr>
+                <td class="ten">17</td>
+                <td rowspan="2">
+                    <div class="flex flex-row font-bold">
+                        <div class="mr-4 p-3">
+                            <div>Charges in Rs <br> शुल्क</div>
+                        </div>
+                        <div class="b-left  mb-auto">
+                            <div class="pl-3 b-bottom pb-3">Water / पानी</div>
+                            <div class="pl-3 pt-3">Sewerage / सीवरेज</div>
+                        </div>
+                    </div>
+                </td>
+                <td id="water_charges"></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td id="sewerage_charges"></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td class="font-bold">Treated Water Charges / उपचारित जल शुल्क</td>
+                <td id="treated_wtr_charge"></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td class="font-bold">Adjustment & Sundry / समायोजन और विविध</td>
+                <td id="adjustment_sundry"></td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td class="font-bold">Amount to be Paid by due date / नियत तारीख तक भुगतान की जाने वाली राशि</td>
+                <td id="amount_to_pay"></td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td class="font-bold">Surcharge in Rs / अधिभार</td>
+                <td id="surcharge"></td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td class="font-bold">Amount to be Paid after due date / नियत तारीख के बाद भुगतान की जाने वाली राशि</td>
+                <td id="amount_after_due"></td>
+            </tr>
+        </table>
+        <div class="border-t border-gray-300 mt-2 pt-2">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="image\MasterHudaLogo1.gif" alt="hsvp" width="100%" height="60px">
+                    </div>
+                </div>
+                <div class="p-1 text-center">
+                    <p>Bank Copy बैंक प्रति</p>
+                </div>
+            </div>
+            <table class="w-full text-xs mt-2">
+                <tr>
+                    <td class="font-bold">Consumer Number / उपभोक्ता संख्या</td>
+                    <td id="consumer_number1">2500001316</td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Bill No / बिल संख्या</td>
+                    <td id="bill_no1"></td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Consumer Name / उपभोक्ता का नाम</td>
+                    <td id="consumer_name_address1"></td>
+                </tr>
+                
+                <tr>
+                    <td class="font-bold">Amount Paid / भुगतान की गई राशि</td>
+                    <td colspan=""></td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Date of Payment / भुगतान की तिथि</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        fetch('http://localhost:3001/api/customer_bills')
+        .then(response => response.json())
+        .then(data => {
+            const bill = data[0];  // Assuming you're only fetching one record or need the first record
+
+            // Populate table data
+            document.getElementById('consumer_number').textContent = bill.consumer_number;
+            document.getElementById('site_code').textContent = bill.site_code;
+            document.getElementById('consumer_name_address').textContent = bill.consumer_name_address;
+            document.getElementById('bill_no').textContent = bill.bill_no;
+            document.getElementById('due_date').textContent =bill.due_date;
+            document.getElementById('plot_category').textContent = bill.plot_category;
+            document.getElementById('plot_size').textContent = bill.plot_size;
+            document.getElementById('total_wc').textContent = bill.total_wc;
+            document.getElementById('connection_size').textContent = bill.connection_size;
+            document.getElementById('bill_from').textContent =bill.bill_from;
+            document.getElementById('bill_to').textContent =bill.bill_to;
+            document.getElementById('meter_old_reading').textContent = bill.meter_old_reading;
+            document.getElementById('meter_new_reading').textContent = bill.meter_new_reading;
+            document.getElementById('consumption_kl').textContent = bill.consumption_kl;
+            document.getElementById('waste_water_charges').textContent = bill.waste_water_charges;
+            document.getElementById('arrears_rs').textContent = bill.arrears_rs;
+            document.getElementById('water_charges').textContent = bill.water_charges;
+            document.getElementById('sewerage_charges').textContent = bill.sewerage_charges;
+            document.getElementById('treated_wtr_charge').textContent = bill.treated_water_charges_rs;
+            document.getElementById('adjustment_sundry').textContent = bill.adjustment_and_sandry;
+            document.getElementById('amount_to_pay').textContent = bill.amount_to_pay;
+            document.getElementById('surcharge').textContent = bill.surcharge;
+            document.getElementById('amount_after_due').textContent = bill.amount_after_due;
+        
+            document.getElementById('consumer_number1').textContent = bill.consumer_number;
+            document.getElementById('bill_no1').textContent = bill.bill_no;
+            document.getElementById('consumer_name_address1').textContent = bill.consumer_name_address;
+  })
+        
+      
+        .catch(error => console.error('Error fetching bill data:', error));
+    </script>
+</body>
+</html>

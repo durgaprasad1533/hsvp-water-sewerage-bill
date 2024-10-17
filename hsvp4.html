@@ -1,0 +1,189 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water & Sewerage Bill</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 p-4">
+    <div class="bg-white p-4 max-w-lg mx-auto border border-gray-300">
+        <div class="flex justify-between items-center mb-4">
+            <div class="flex items-center">
+                <img alt="HSVP logo" class="mr-2" height="50" src="https://storage.googleapis.com/a1aa/image/5hOsMfTZNy1reUd6fd6ai1NFjv3AeX9tQg7ctD8avjM1W9cOB.jpg" width="50"/>
+                <div>
+                    <h1 class="text-lg font-bold">HSVP</h1>
+                    <p class="text-xs">हरियाणा शहरी विकास प्राधिकरण</p>
+                </div>
+            </div>
+            <div class="text-right text-xs">
+                <p>Water & Sewerage Bill</p>
+                <p>पानी और सीवरेज बिल</p>
+            </div>
+        </div>
+        <table class="w-full text-xs">
+            <tr>
+                <td class="font-bold">S.No</td>
+                <td class="font-bold">Particulars / विवरण</td>
+                <td class="font-bold">Details / विवरण</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Consumer Number / उपभोक्ता संख्या</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="consumer_number" required></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Site Code / साइट कोड</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="site_code" required></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Consumer Name / उपभोक्ता का नाम</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="consumer_name" required></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bill No and Date / बिल संख्या और तिथि</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="bill_no_date" required></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Due Date / नियत तारीख</td>
+                <td><input class="w-full p-2 border border-gray-300" type="date" name="due_date" required></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Plot Category / भूखंड श्रेणी</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="plot_category" required></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Plot Size / भूखंड का आकार</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="plot_size" required></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Total No. of WC / कुल शौचालयों की संख्या</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="total_wc" required></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Connection Size / कनेक्शन का आकार</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="connection_size" required></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Bill Period From Date / बिल अवधि प्रारंभ तिथि</td>
+                <td><input class="w-full p-2 border border-gray-300" type="date" name="bill_period_from" required></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Bill Period To Date / बिल अवधि समाप्ति तिथि</td>
+                <td><input class="w-full p-2 border border-gray-300" type="date" name="bill_period_to" required></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Meter Reading Date / मीटर रीडिंग तिथि</td>
+                <td><input class="w-full p-2 border border-gray-300" type="date" name="meter_reading_date" required></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Consumption (KL) & Meter Status / खपत (केएल) और मीटर स्थिति</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="consumption" required></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Waste Water Charges / अपशिष्ट जल शुल्क</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="waste_water_charges" required></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Arrears in Rs / बकाया राशि</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="arrears" required></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Charges in Rs / शुल्क</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="charges" required></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Water / पानी</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="water" required></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Sewerage / सीवरेज</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="sewerage" required></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Treated Water Charges / उपचारित जल शुल्क</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="treated_water_charges" required></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Adjustment & Sundry / समायोजन और विविध</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="adjustment_sundry" required></td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>Amount to be Paid by due date / नियत तारीख तक भुगतान की जाने वाली राशि</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="amount_due_date" required></td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>Surcharge in Rs / अधिभार</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="surcharge" required></td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>Amount to be Paid after due date / नियत तारीख के बाद भुगतान की जाने वाली राशि</td>
+                <td><input class="w-full p-2 border border-gray-300" type="text" name="amount_after_due_date" required></td>
+            </tr>
+        </table>
+        <div class="border-t border-gray-300 mt-2 pt-2">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img alt="HSVP logo" class="mr-2" height="50" src="https://storage.googleapis.com/a1aa/image/5hOsMfTZNy1reUd6fd6ai1NFjv3AeX9tQg7ctD8avjM1W9cOB.jpg" width="50"/>
+                    <div>
+                        <h1 class="text-lg font-bold">HSVP</h1>
+                    </div>
+                </div>
+                <div class="text-right text-xs">
+                    <p>Bank Copy</p>
+                    <p>बैंक प्रति</p>
+                </div>
+            </div>
+            <table class="w-full text-xs mt-2">
+                <tr>
+                    <td class="font-bold">Consumer Number / उपभोक्ता संख्या</td>
+                    <td><input class="w-full p-2 border border-gray-300" type="text" name="consumer_number_bank" required></td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Bill No / बिल संख्या</td>
+                    <td><input class="w-full p-2 border border-gray-300" type="text" name="bill_no_bank" required></td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Consumer Name / उपभोक्ता का नाम</td>
+                    <td><input class="w-full p-2 border border-gray-300" type="text" name="consumer_name_bank" required></td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Date of Payment / भुगतान की तिथि</td>
+                    <td><input class="w-full p-2 border border-gray-300" type="date" name="date_of_payment" required></td>
+                </tr>
+                <tr>
+                    <td class="font-bold">Amount Paid / भुगतान की गई राशि</td>
+                    <td><input class="w-full p-2 border border-gray-300" type="text" name="amount_paid" required></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.b-left{
+    border-left: 0.1rem solid black;
+}
+.b-bottom{
+    border-bottom: 0.1rem solid black;
+}
+.ten{
+    border-bottom: none;
+}
